@@ -33,3 +33,12 @@ and to understand how this time varies across operational conditions.
 - Excel file with pivot tables
 - Written insights summarizing findings
 
+---
+
+## Key Insights (Phase 1)
+- Order-to-pickup time averages appeared stable, but distribution analysis revealed a significant long tail (>15 minutes).
+- Pickup delays were present even during low traffic conditions, indicating non-traffic-related operational issues.
+- Metropolitan cities showed scale-driven delays rather than isolated inefficiencies.
+- Percentage-based analysis exposed risks hidden by average metrics, similar to tail latency in large-scale systems.
+
+
