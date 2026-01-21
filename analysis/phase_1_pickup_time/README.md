@@ -1,19 +1,35 @@
 # Phase 1: Order to Pickup Time Analysis
 
-Objective:
-To analyze how long restaurants take to prepare orders after they are placed,
-and how this time varies across traffic conditions and city types.
+## Objective
+To analyze how long it takes for orders to be picked up after being placed,
+and to understand how this time varies across operational conditions.
 
-Why this matters:
-Order-to-pickup time reflects restaurant efficiency and kitchen readiness.
-Delays here cascade into delivery delays and impact customer satisfaction.
+---
 
-In this phase, we:
-- Cleaned and standardized time data
-- Created time buckets (<5, 5–10, 10–15, >15 minutes)
-- Analyzed distributions instead of relying only on averages
-- Compared pickup time across traffic density and city types
+## Key Questions Addressed
+- How is order-to-pickup time distributed?
+- Do averages hide operational delays?
+- How does traffic density affect pickup time?
+- Does city type influence pickup efficiency?
 
-Key takeaway:
-Averages appeared similar across categories, but distribution analysis revealed
-meaningful operational differences.
+---
+
+## Metrics Used
+- Order_to_pickup_minutes
+- Pickup time buckets (<5, 5–10, 10–15, >15 minutes)
+- Percentage distribution
+- Count distribution
+
+---
+
+## Analysis Approach
+- Used Pivot Tables for aggregation
+- Analyzed both count and percentage distributions
+- Avoided relying only on averages to prevent misleading conclusions
+
+---
+
+## Output Files
+- Excel file with pivot tables
+- Written insights summarizing findings
+
