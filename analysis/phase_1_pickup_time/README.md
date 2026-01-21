@@ -40,5 +40,21 @@ and to understand how this time varies across operational conditions.
 - Pickup delays were present even during low traffic conditions, indicating non-traffic-related operational issues.
 - Metropolitan cities showed scale-driven delays rather than isolated inefficiencies.
 - Percentage-based analysis exposed risks hidden by average metrics, similar to tail latency in large-scale systems.
+---
+
+## Excel Analysis File
+
+The complete Phase 1 analysis is documented in the Excel workbook below:
+
+📊 **pickup_time_analysis.xlsx**
+
+This Excel file contains:
+- Cleaned pivot tables (count-based analysis)
+- Percentage distributions within traffic conditions
+- Percentage distributions within city types
+- Time bucket segmentation used for operational insights
+
+Readers are encouraged to explore the Excel file alongside this README
+to understand how insights were derived step by step.
 
 
