@@ -1,112 +1,88 @@
 # Food Delivery Operations Analysis (Excel Project)
 
 ## Project Overview
-This project simulates a real-world operations analysis for food delivery platforms such as **Swiggy** and **Zomato**.  
-The goal is to understand how operational delays occur and how data-driven insights can help improve customer experience and delivery efficiency.
+This project simulates a real-world operations analytics case study for food delivery platforms such as Swiggy and Zomato.
 
-This project is built entirely using **Microsoft Excel**, focusing on analytical thinking rather than tools alone.
+The objective is to understand where and why operational delays occur in food delivery workflows and how data-driven insights can help improve customer experience, delivery efficiency, and reliability.
+
+The project is built entirely using Microsoft Excel, with a strong focus on analytical thinking, problem framing, and interpretation rather than tools alone.
 
 ---
 
 ## Business Context
-In food delivery platforms, total delivery time is influenced by multiple stages:
-- Order placed → Restaurant prepares food
-- Rider reaches restaurant (Pickup Time)
-- Rider delivers to customer (Delivery Time)
+In food delivery platforms, total delivery time is influenced by multiple operational stages:
 
-While customers often tolerate food preparation time, **delays after food is ready (pickup & delivery delays)** lead to dissatisfaction, cancellations, and poor ratings.
+- Order placed → Restaurant prepares food  
+- Rider reaches restaurant (Pickup Time)  
+- Rider delivers order to customer (Delivery Time)
 
-This project focuses on **Order-to-Pickup Time** as Phase 1 of a larger analysis.
+While customers often tolerate food preparation time, delays after food is ready (pickup and delivery delays) lead to customer frustration, poor ratings, cancellations, and reduced platform trust.
+
+This project breaks down the delivery process into phases to analyze delays systematically instead of relying on overall averages.
 
 ---
 
-## Phase 1 Objective: Order-to-Pickup Time Analysis
-The objective of Phase 1 is to:
-- Understand how long it takes for orders to be picked up after being placed
-- Analyze how this time varies across:
-  - Traffic conditions
-  - City types (Metropolitan, Urban, Semi-Urban)
-- Identify whether averages hide operational risks
+## Phase-wise Analysis Overview
+This project is structured as a phase-wise operational analysis, where each phase answers a specific business question.
+
+### Phase 1: Order-to-Pickup Time Analysis
+Key question:  
+How long does it take for orders to be picked up after being placed, and what factors influence this delay?
+
+What was analyzed:
+- Order-to-pickup time distribution
+- Pickup delays across traffic conditions (Low / Medium / High)
+- Pickup delays across city types (Metropolitan / Urban / Semi-Urban)
+
+Key takeaway:
+Average pickup times appeared stable, but distribution analysis revealed hidden long-tail delays, even under low-traffic conditions.
+
+---
+
+### Phase 2: Distance vs Delivery Time Analysis
+Key question:  
+Does delivery distance increase the risk of slow or very slow deliveries?
+
+What was analyzed:
+- Relative delivery distance using restaurant and delivery coordinates
+- Distance buckets: Very Short, Short, Medium, Long
+- Delivery time buckets: Fast, Acceptable, Slow, Very Slow
+- Count and percentage distribution within each distance bucket
+
+Key takeaway:
+Delivery risk increases with distance, but distance alone does not explain all delays. Short-distance orders still experience significant delays, indicating execution issues beyond routing or distance.
+
+---
+
+## Why Distribution Analysis Matters
+Relying only on averages can be misleading because:
+- Averages hide extreme delays
+- Customers experience individual delays, not overall performance
+- Operational risk lies in the long tail (slow and very slow cases)
+
+This project emphasizes distribution-based analysis, similar to how large-scale systems monitor tail latency and SLA breaches.
 
 ---
 
 ## Dataset Description
 The dataset contains food delivery order records with attributes such as:
-- Order-to-pickup time (in minutes)
-- Traffic density (Low / Medium / High)
+- Order and pickup timestamps
+- Delivery time (minutes)
+- Traffic density
 - City type
 - Delivery partner details
-- Restaurant and delivery locations
+- Restaurant and delivery location coordinates
 
-Raw data was cleaned before analysis.
-
----
-
-## Methodology (Step-by-Step)
-1. Cleaned raw data and standardized column formats
-2. Created time buckets for Order-to-Pickup Time:
-   - <5 minutes
-   - 5–10 minutes
-   - 10–15 minutes
-   - >15 minutes
-3. Built Pivot Tables to analyze:
-   - Overall pickup time distribution
-   - Pickup time distribution by traffic condition
-   - Pickup time distribution by city type
-4. Converted counts into percentages to analyze distributions
-5. Compared averages vs distributions to uncover hidden insights
-
----
-
-## Key Analyses Performed
-
-### 1. Overall Order-to-Pickup Time Distribution
-Analyzed how pickup times are distributed across defined time buckets.
-
-**Insight:**  
-Averages appeared stable, but distributions revealed that a significant portion of orders exceeded acceptable pickup times.
-
----
-
-### 2. Pickup Time Distribution by Traffic Condition
-Compared pickup times across:
-- Low traffic
-- Medium traffic
-- High traffic
-
-**Insight:**  
-Even under low traffic, long pickup times (>15 min) existed, indicating issues beyond traffic alone (restaurant readiness, rider availability).
-
----
-
-### 3. Pickup Time Distribution by City Type
-Compared pickup behavior across:
-- Metropolitan
-- Urban
-- Semi-Urban cities
-
-**Insight:**  
-Metropolitan cities showed higher volume but similar pickup distributions, suggesting scalability challenges rather than isolated delays.
-
----
-
-## Why Distribution Matters More Than Average
-Average pickup time remained around similar values across categories.
-
-However:
-- Averages hide tail delays
-- Customers experience delays, not averages
-- Operational risk lies in the **long tail (>15 min)**
-
-This mirrors real-world metrics like **tail latency** used by large-scale tech companies.
+Raw data was cleaned and transformed before analysis.
 
 ---
 
 ## Tools Used
 - Microsoft Excel
+- Calculated columns
 - Pivot Tables
-- Percentage distribution analysis
-- Business reasoning (no automation or scripts)
+- Count and percentage distribution analysis
+- Business-oriented interpretation (no automation or scripting)
 
 ---
 
@@ -115,24 +91,41 @@ food-delivery-operations-analysis/
 │
 ├── README.md
 ├── data/
-│ └── clean_data.xlsx
+│   └── clean_data.xlsx
 ├── analysis/
-│ └── Phase_1_Pickup_Time_Analysis.xlsx
-├── reports/
-│ └── Phase_1_Analysis_Report.pdf
+│   ├── phase_1_pickup_time/
+│   │   ├── README.md
+│   │   └── phase_1_pickup_time_analysis.xlsx
+│   └── phase_2_distance_delivery_analysis/
+│       ├── README.md
+│       ├── phase_2_clean_data.xlsx
+│       └── phase_2_pivot_analysis.xlsx
 └── screenshots/
 
 ---
 
+## Key Skills Demonstrated
+- Data cleaning and feature engineering in Excel
+- Pivot table–based analysis
+- Distribution and risk analysis
+- Business-oriented interpretation
+- Structured analytical documentation
+
 ---
 
-## Next Steps
-- Phase 2: Pickup-to-Delivery Time Analysis
-- Phase 3: End-to-End Delivery Time vs Customer Ratings
-- Phase 4: Operational Recommendations
+## Project Roadmap
+- Phase 1: Order-to-Pickup Time Analysis (Completed)
+- Phase 2: Distance vs Delivery Time Analysis (Completed)
+- Phase 3: End-to-End Delivery Time & Execution Drivers
+- Phase 4: Operational Risk Identification & Recommendations
 
 ---
 
 ## Author
 Ankit Yadav  
 Aspiring Data Analyst | Operations Analytics | Excel
+
+---
+
+## Note
+This project is intentionally built in Excel to demonstrate strong analytical fundamentals before moving to SQL, Python, and BI tools.
